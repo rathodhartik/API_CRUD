@@ -9,6 +9,8 @@ class StudentSerializer(serializers.Serializer):
    name=serializers.CharField(max_length=100)
    address=serializers.CharField(max_length=100)
    age=serializers.IntegerField()
+   subject=serializers.CharField(max_length=100)
+   marks=serializers.IntegerField()
    
    
    # Create
@@ -21,5 +23,7 @@ class StudentSerializer(serializers.Serializer):
       instance.name=validated_data.get('name',instance.name)
       instance.address=validated_data.get('address',instance.address)
       instance.age=validated_data.get('age',instance.age)
+      instance.subject=validated_data.get('subject',instance.subject)
+      instance.marks=validated_data.get('marks',instance.marks)
       instance.save()
       return instance
