@@ -8,7 +8,13 @@ class Student(models.Model):
     subject=models.CharField(max_length=100,null=False)
     
 
+<<<<<<< HEAD
     marks=models.IntegerField(null=False)
     
+=======
+    marks=models.IntegerField()
+    marks2=models.IntegerField()
+
+>>>>>>> ri
     def __str__(self):
         return self.name
