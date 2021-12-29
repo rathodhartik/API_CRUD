@@ -7,6 +7,7 @@ class Student(models.Model):
     age=models.IntegerField()
 
     marks=models.IntegerField()
-    
+    marks2=models.IntegerField()
+
     def __str__(self):
         return self.name
